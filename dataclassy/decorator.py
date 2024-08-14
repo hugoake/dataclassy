@@ -7,9 +7,11 @@
  This file contains code relating to dataclassy's decorator.
 """
 from typing import Dict, Optional, Type
+from typing_extensions import dataclass_transform
 from .dataclass import DataClass, DataClassMeta
 
 
+@dataclass_transform()
 def dataclass(cls: Optional[type] = None, *, meta=DataClassMeta, **options) -> Type[DataClass]:
     """The decorator used to convert an ordinary class into a data class.
 

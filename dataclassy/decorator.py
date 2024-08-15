@@ -6,12 +6,14 @@
 
  This file contains code relating to dataclassy's decorator.
 """
-from typing import Dict, Optional, Type
-from typing_extensions import dataclass_transform
+from typing import Dict, Optional, Type, dataclass_transform
 from .dataclass import DataClass, DataClassMeta
+from dataclasses import Field, field
 
 
-@dataclass_transform()
+@dataclass_transform(
+    field_specifiers=(Field, field)
+)
 def dataclass(cls: Optional[type] = None, *, meta=DataClassMeta, **options) -> Type[DataClass]:
     """The decorator used to convert an ordinary class into a data class.
 

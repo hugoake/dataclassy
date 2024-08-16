@@ -15,7 +15,7 @@ from platform import python_implementation
 from sys import getsizeof, version_info
 
 from dataclassy import *
-from dataclassy.dataclass import DataClassMeta
+from dataclassy.misc import DataClassMeta
 
 
 def parameters(obj) -> Dict[str, Union[Type, Tuple[Type, Any]]]:

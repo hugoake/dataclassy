@@ -8,7 +8,7 @@
 """
 from typing import Any, Callable, Dict, Tuple, Type, Union
 
-from .dataclass import DataClassMeta, DataClass, Internal
+from .misc import DataClassMeta, DataClass, Internal
 
 
 def is_dataclass(obj: Any) -> bool:

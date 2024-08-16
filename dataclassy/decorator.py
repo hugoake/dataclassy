@@ -7,7 +7,7 @@
  This file contains code relating to dataclassy's decorator.
 """
 from typing import Dict, Optional, Type, dataclass_transform
-from .dataclass import DataClass, DataClassMeta
+from .misc import DataClass, DataClassMeta
 from dataclasses import Field, field
 
 
